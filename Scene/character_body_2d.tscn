@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0rho4fewkbg5"]
+
+[ext_resource type="Script" path="res://Script/CharacterBody2D.gd" id="1_ct3dn"]
+[ext_resource type="Texture2D" uid="uid://gpr8a2amep4x" path="res://Assets/Arcade - Arkanoid - Vaus.png" id="2_r32at"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_058vc"]
+size = Vector2(31, 8)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(591, 533)
+scale = Vector2(2.23572, 2.24139)
+script = ExtResource("1_ct3dn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_r32at")
+region_enabled = true
+region_rect = Rect2(31.2278, -0.371984, 32.845, 8.42736)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_058vc")
