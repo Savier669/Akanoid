@@ -1,22 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://carpkl28hn151"]
+[gd_scene load_steps=5 format=3 uid="uid://carpkl28hn151"]
 
-[ext_resource type="Script" path="res://Script/CharacterBody2D.gd" id="1_dukn4"]
-[ext_resource type="Texture2D" uid="uid://gpr8a2amep4x" path="res://Assets/Arcade - Arkanoid - Vaus.png" id="1_mraix"]
+[ext_resource type="PackedScene" uid="uid://bgkxty7f5acpv" path="res://Scene/tile_map.tscn" id="1_ijy7i"]
+[ext_resource type="PackedScene" uid="uid://b1g3dj2unjpnh" path="res://Scene/player.tscn" id="2_hlwwi"]
+[ext_resource type="PackedScene" uid="uid://e516op6q45bo" path="res://Scene/Game Object/ball.tscn" id="4_5tna2"]
+[ext_resource type="Texture2D" uid="uid://ds121kgskhhyw" path="res://Assets/background_level1.png" id="5_7xeei"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_058vc"]
-size = Vector2(31, 8)
+[node name="Main" type="Node2D"]
 
-[node name="Main" type="Node"]
+[node name="TileMap" parent="." instance=ExtResource("1_ijy7i")]
+layer_0/tile_data = PackedInt32Array(65545, 196608, 1342177296, 786438, 196608, 16, 720902, 196608, 16, 655366, 196608, 16, 589830, 196608, 16, 524294, 196608, 16, 458758, 196608, 16, 393222, 196608, 16, 327686, 196608, 16, 262150, 196608, 16, 196614, 196608, 16, 131078, 196608, 16, 65543, 196608, 1342177296, 65544, 196608, 1342177296, 65546, 196608, 1342177296, 65547, 196608, 1342177296, 65548, 196608, 1342177296, 65549, 196608, 1342177296, 65550, 196608, 1342177296, 65551, 196608, 1342177296, 65552, 196608, 1342177296, 65553, 196608, 1342177296, 65554, 196608, 1342177296, 65555, 196608, 1342177296, 65556, 196608, 1342177296, 65557, 196608, 1342177296, 65558, 196608, 1342177296, 65559, 196608, 1342177296, 131096, 196608, 805306384, 196632, 196608, 805306384, 262168, 196608, 805306384, 327704, 196608, 805306384, 393240, 196608, 805306384, 458776, 196608, 805306384, 524312, 196608, 805306384, 589848, 196608, 805306384, 655384, 196608, 805306384, 720920, 196608, 805306384, 786456, 196608, 805306384, 851992, 196608, 805306384, 917510, 196608, 805306384)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(591, 533)
-scale = Vector2(2.21627, 2.26091)
-script = ExtResource("1_dukn4")
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_hlwwi")]
+position = Vector2(585, 498)
+safe_margin = 0.001
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("1_mraix")
+[node name="BackGround" type="Sprite2D" parent="."]
+z_index = -1
+texture_repeat = 2
+position = Vector2(588, 144)
+scale = Vector2(2, 2.755)
+texture = ExtResource("5_7xeei")
 region_enabled = true
-region_rect = Rect2(31.2278, -0.371984, 32.845, 8.42736)
+region_rect = Rect2(0, 0, 1920, 2560)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_058vc")
+[node name="ball" parent="." instance=ExtResource("4_5tna2")]
