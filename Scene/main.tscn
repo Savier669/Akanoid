@@ -121,11 +121,12 @@ sources/0 = SubResource("TileSetAtlasSource_ij3s3")
 
 [node name="Main" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_hlwwi")]
-position = Vector2(585, 498)
+[node name="player" parent="." instance=ExtResource("2_hlwwi")]
+position = Vector2(548, 498)
 safe_margin = 0.001
 
 [node name="BackGround" type="Sprite2D" parent="."]
+visible = false
 z_index = -1
 texture_repeat = 2
 position = Vector2(588, 144)
@@ -135,8 +136,10 @@ region_enabled = true
 region_rect = Rect2(0, 0, 1920, 2560)
 
 [node name="ball" parent="." instance=ExtResource("4_5tna2")]
+position = Vector2(581, 479)
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-33, 0)
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_q5qhr")
 format = 2
