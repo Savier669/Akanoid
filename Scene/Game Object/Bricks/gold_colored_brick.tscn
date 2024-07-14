@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6x6d5s8ck51x"]
+
+[ext_resource type="PackedScene" uid="uid://ctov7q5wtjxnt" path="res://Scene/Game Object/Bricks/colored_brick.tscn" id="1_0u73l"]
+[ext_resource type="Texture2D" uid="uid://crbbvxhrqvuk3" path="res://Assets/Arcade - Arkanoid - Blocks & Backgrounds.png" id="2_ard6f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wnwg"]
+atlas = ExtResource("2_ard6f")
+region = Rect2(0, 24, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xunu3"]
+atlas = ExtResource("2_ard6f")
+region = Rect2(16, 24, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljxr1"]
+atlas = ExtResource("2_ard6f")
+region = Rect2(32, 24, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibb60"]
+atlas = ExtResource("2_ard6f")
+region = Rect2(48, 24, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6yyu"]
+atlas = ExtResource("2_ard6f")
+region = Rect2(64, 24, 16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bya7s"]
+atlas = ExtResource("2_ard6f")
+region = Rect2(80, 24, 16, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfp2l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wnwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xunu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljxr1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibb60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6yyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bya7s")
+}],
+"loop": true,
+"name": &"shine",
+"speed": 5.0
+}]
+
+[node name="ColoredBrick" instance=ExtResource("1_0u73l")]
+unbreakable = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="3"]
+sprite_frames = SubResource("SpriteFrames_yfp2l")
+animation = &"shine"
+autoplay = "shine"
+frame_progress = 0.0248857

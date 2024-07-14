@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctov7q5wtjxnt"]
+
+[ext_resource type="Script" path="res://Script/Game Object/colored_brick.gd" id="1_wcntw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2tml"]
+region = Rect2(32, 0, 16, 8)
+
+[node name="ColoredBrick" type="StaticBody2D"]
+script = ExtResource("1_wcntw")
+health = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_o2tml")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(8, 4, -8, 4, -8, -4, 8, -4)
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1.12, 1.28)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(8, 4, -8, 4, -8, -4, 8, -4)
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
