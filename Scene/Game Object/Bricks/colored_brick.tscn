@@ -1,12 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctov7q5wtjxnt"]
 
-[ext_resource type="Script" path="res://Script/Game Object/colored_brick.gd" id="1_wcntw"]
+[ext_resource type="Script" path="res://Script/Game Object/colored_brick.gd" id="1_ietme"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o2tml"]
 region = Rect2(32, 0, 16, 8)
 
 [node name="ColoredBrick" type="StaticBody2D"]
-script = ExtResource("1_wcntw")
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_ietme")
 health = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
