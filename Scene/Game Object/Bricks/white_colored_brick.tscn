@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm4qyfpgqh2sb"]
+
+[ext_resource type="PackedScene" uid="uid://ctov7q5wtjxnt" path="res://Scene/Game Object/Bricks/colored_brick.tscn" id="1_w36wb"]
+[ext_resource type="Texture2D" uid="uid://crbbvxhrqvuk3" path="res://Assets/Arcade - Arkanoid - Blocks & Backgrounds.png" id="2_uneh2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dweud"]
+atlas = ExtResource("2_uneh2")
+region = Rect2(0, 0, 16, 8)
+
+[node name="ColoredBrick" instance=ExtResource("1_w36wb")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_dweud")
