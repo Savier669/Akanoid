@@ -1,19 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://carpkl28hn151"]
+[gd_scene load_steps=8 format=3 uid="uid://carpkl28hn151"]
 
 [ext_resource type="PackedScene" uid="uid://b1g3dj2unjpnh" path="res://Scene/player.tscn" id="2_hlwwi"]
 [ext_resource type="PackedScene" uid="uid://e516op6q45bo" path="res://Scene/Game Object/ball.tscn" id="4_5tna2"]
 [ext_resource type="Texture2D" uid="uid://crbbvxhrqvuk3" path="res://Assets/Arcade - Arkanoid - Blocks & Backgrounds.png" id="4_ex71m"]
 [ext_resource type="Texture2D" uid="uid://ds121kgskhhyw" path="res://Assets/background_level1.png" id="5_7xeei"]
-[ext_resource type="PackedScene" uid="uid://c8tsyfunjg7lr" path="res://Scene/Game Object/Bricks/blue_colored_brick.tscn" id="5_wnvfv"]
-[ext_resource type="PackedScene" uid="uid://dd5w5isi4w5q0" path="res://Scene/Game Object/Bricks/yellow_colored_brick.tscn" id="6_fks1e"]
-[ext_resource type="PackedScene" uid="uid://dw702gbm3cwsw" path="res://Scene/Game Object/Bricks/cyan_colored_brick.tscn" id="7_s1784"]
-[ext_resource type="PackedScene" uid="uid://b6x6d5s8ck51x" path="res://Scene/Game Object/Bricks/gold_colored_brick.tscn" id="8_p2ghk"]
-[ext_resource type="PackedScene" uid="uid://j1mcn3c43kyp" path="res://Scene/Game Object/Bricks/green_colored_brick.tscn" id="9_y2mlg"]
-[ext_resource type="PackedScene" uid="uid://b0hylds4xl02e" path="res://Scene/Game Object/Bricks/orange_colored_brick.tscn" id="10_jw2a7"]
-[ext_resource type="PackedScene" uid="uid://0pplrsxjvp4s" path="res://Scene/Game Object/Bricks/red_colored_brick.tscn" id="11_uinga"]
-[ext_resource type="PackedScene" uid="uid://bdyxc7kpcpqc" path="res://Scene/Game Object/Bricks/silver_colored_brick.tscn" id="12_yy2b0"]
-[ext_resource type="PackedScene" uid="uid://bcgb47trnsm8e" path="res://Scene/Game Object/Bricks/violet_colored_brick.tscn" id="13_57cqe"]
-[ext_resource type="PackedScene" uid="uid://cm4qyfpgqh2sb" path="res://Scene/Game Object/Bricks/white_colored_brick.tscn" id="14_cs1sh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ij3s3"]
 texture = ExtResource("4_ex71m")
@@ -129,22 +119,8 @@ physics_layer_0/collision_layer = 8
 physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_ij3s3")
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_bfmjt"]
-resource_name = "Bricks"
-scenes/1/scene = ExtResource("5_wnvfv")
-scenes/2/scene = ExtResource("7_s1784")
-scenes/3/scene = ExtResource("8_p2ghk")
-scenes/4/scene = ExtResource("9_y2mlg")
-scenes/5/scene = ExtResource("10_jw2a7")
-scenes/6/scene = ExtResource("11_uinga")
-scenes/7/scene = ExtResource("12_yy2b0")
-scenes/8/scene = ExtResource("13_57cqe")
-scenes/9/scene = ExtResource("14_cs1sh")
-scenes/10/scene = ExtResource("6_fks1e")
-
 [sub_resource type="TileSet" id="TileSet_uv74n"]
 tile_size = Vector2i(16, 8)
-sources/0 = SubResource("TileSetScenesCollectionSource_bfmjt")
 
 [node name="Main" type="Node2D"]
 
@@ -175,4 +151,3 @@ layer_0/tile_data = PackedInt32Array(2228245, 196608, 16, 2293781, 196608, 17, 2
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_uv74n")
 format = 2
-layer_0/tile_data = PackedInt32Array(786444, 0, 65536, 786445, 0, 65536, 786446, 0, 65536, 786447, 0, 65536, 786448, 0, 65536, 786449, 0, 65536, 786450, 0, 65536, 786451, 0, 65536, 786452, 0, 65536, 786453, 0, 65536, 786455, 0, 65536, 786454, 0, 65536, 786443, 0, 65536, 786442, 0, 65536, 720909, 0, 65536, 720910, 0, 65536, 720911, 0, 65536, 655376, 0, 65536, 655377, 0, 65536, 655378, 0, 65536, 655379, 0, 65536, 655380, 0, 65536, 655381, 0, 65536, 655382, 0, 65536, 655383, 0, 65536, 655384, 0, 65536, 720920, 0, 65536, 786456, 0, 65536)
